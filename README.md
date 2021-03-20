@@ -2,7 +2,7 @@
 
 
 welcome to my app!!!
-Live site link:[]
+Live site link:[https://eager-poitras-54f586.netlify.app]
 
 ## `Details:`
 
