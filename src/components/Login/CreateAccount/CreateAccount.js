@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import './CreateAccount.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 import Header from '../../Header/Header';
 import { createUserWithEmailAndPassword, handleGoogleSignIn, initializeLoginFramework } from '../LoginManager';
 import { UserContext } from '../../../App';
