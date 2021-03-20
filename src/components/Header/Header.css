@@ -1,0 +1,15 @@
+.nav-test{
+    border: 1px solid red;
+}
+
+.link{
+    margin-left: 20px ;
+}
+ .header-btn{
+    margin-left: 20px;
+    padding: 6px 20px;
+    background-color: rgb(92, 135, 205);
+    color: #fff;
+    border: 1px solid rgb(47, 86, 160);
+    border-radius: 5px;
+ }
