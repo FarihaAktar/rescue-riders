@@ -40,6 +40,13 @@
     margin-top: 20px;
     text-align: center;
 }
+.date{
+    margin-top: 10px;
+}
+.date-picker{
+    width: 100%;
+    background-color: rgba(253, 143, 100, 0.849);
+}
 
 /* media query for mobile device */
 @media only screen and (max-width: 600px){

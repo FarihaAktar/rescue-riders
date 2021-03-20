@@ -5,11 +5,15 @@ import vehicle from '../../MOCK_DATA.json';
 import { useParams } from 'react-router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserFriends } from '@fortawesome/free-solid-svg-icons';
-import GoogleMap from '../GoogleMap/GoogleMap'
+import GoogleMap from '../GoogleMap/GoogleMap';
+import DatePicker from 'react-date-picker'
+
+
 
 
 const Search = () => {
     const { key } = useParams()
+    const [value, onChange] = useState(new Date());
     const [newDataInfo, setNewDataInfo] = useState({})
     const [data, setData] = useState([]);
     const [submit, setSubmit] = useState(true)
@@ -19,7 +23,7 @@ const Search = () => {
     })
     useEffect(() => {
         setData(vehicle);
-    },[])
+    }, [])
 
     const handleBlur = (e) => {
         const newLocationInfo = { ...location };
@@ -48,6 +52,13 @@ const Search = () => {
                     <br />
                     <input onBlur={handleBlur} className="search-text" type="text" name="destination" required placeholder="Mirpur" />
                     <br />
+                    <div className="date">
+                        <DatePicker
+                            className="date-picker"
+                            onChange={onChange}
+                            value={value}
+                        />
+                    </div>
                     <input onClick={handleClick} className="search-btn" type="submit" value="Search" />
                 </div>
                     :
