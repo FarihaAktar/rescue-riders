@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 
 const CreateAccount = () => {
-    const [loggedInUser,setLoggedInUser] = useContext(UserContext);
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [user, setUser] = useState({
         name: '',
         email: '',
@@ -38,7 +38,8 @@ const CreateAccount = () => {
         if (e.target.name === "confirmPassword") {
             const { password } = user;
             if (password !== e.target.value) {
-                isFormValid = false
+                isFormValid = false;
+                alert("Password didn't matched!");
             }
         }
         if (isFormValid) {
@@ -51,10 +52,16 @@ const CreateAccount = () => {
         if (user.email && user.password && user.confirmPassword) {
             createUserWithEmailAndPassword(user.name, user.email, user.password)
                 .then(res => {
-                    console.log(res)
-                    setUser(res);
-                    setLoggedInUser(res);
-                    history.replace(from);
+                    if (res.error) {
+                        setUser(res);
+                        setLoggedInUser(res);
+                        console.log(user)
+                    }
+                    else {
+                        setUser(res);
+                        setLoggedInUser(res);
+                        history.replace(from);
+                    }
                 })
         }
         e.preventDefault()
@@ -85,7 +92,7 @@ const CreateAccount = () => {
                     <br />
                     <input className="form-button" type="submit" value="Create an account" />
                     <div className="comment">
-                        {user.success && <p>Account Created successfully</p>}
+                        {user?.success && <p>Account Created successfully</p>}
                         <p style={{ color: 'red' }}>{user.error}</p>
                         <h6>Already have an account?</h6>
                         <Link to="/login">Login</Link>

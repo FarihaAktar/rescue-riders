@@ -51,9 +51,12 @@ const Login = () => {
                     setUser(res);
                     setLoggedInUser(res);
                     history.replace(from);
-                    // console.log(res)
+                    // console.log(user)
 
                 })
+        }
+        else{
+            alert("Enter at least 6 Character and a number!")
         }
         e.preventDefault();
     }
@@ -81,7 +84,7 @@ const Login = () => {
                     <a className="forgot-tag" href="/account">Forgot Password</a>
                     <input className="form-button" type="submit" value="Login" />
                     <div className="comment">
-                        <p style={{ color: 'red' }}>{loggedInUser.error}</p>
+                         <p style={{ color: 'red' }}>{user.error}</p>
                         <h6>Don't have an account?</h6>
                         <Link to="/account">Create an account</Link>
                     </div>
