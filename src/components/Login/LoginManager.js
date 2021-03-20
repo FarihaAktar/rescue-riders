@@ -57,3 +57,25 @@ export const signInWithEmailAndPassword = (email, password) => {
             return newUserInfo
         });
 }
+
+export const handleGoogleSignIn = () => {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    return firebase.auth()
+        .signInWithPopup(provider)
+        .then(res => {
+            const { email, displayName } = res.user;
+            const signedInUser = {
+                isSignedIn: true,
+                email: email,
+                name: displayName,
+                success: true
+            }
+            console.log(signedInUser)
+            return signedInUser;
+            
+        })
+
+        .catch(err => {
+            console.log(err)
+        })
+}

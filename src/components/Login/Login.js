@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import Header from '../Header/Header';
 import { UserContext } from '../../App';
-import { initializeLoginFramework, signInWithEmailAndPassword } from './LoginManager';
+import { handleGoogleSignIn, initializeLoginFramework, signInWithEmailAndPassword } from './LoginManager';
 import { useHistory, useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 
@@ -52,12 +52,19 @@ const Login = () => {
                     setLoggedInUser(res);
                     history.replace(from);
                     // console.log(res)
-                    
+
                 })
         }
         e.preventDefault();
     }
-
+    const googleSignIn = () => {
+        handleGoogleSignIn()
+        .then(res =>{
+            setUser(res);
+            setLoggedInUser(res);
+            history.replace(from);
+        })
+    }
     return (
         <div className="container">
             <Header></Header>
@@ -82,11 +89,7 @@ const Login = () => {
             </div>
             <div className="social-media">
                 <h5>Or</h5>
-                <div className="social-icon-text">
-                    <FontAwesomeIcon className="social-icon" icon={faFacebook} />
-                    <h6 >Continue with Facebook</h6>
-                </div>
-                <div className="social-icon-text">
+                <div onClick={googleSignIn} className="social-icon-text">
                     <FontAwesomeIcon className="social-icon" icon={faGoogle} />
                     <h6 >Continue with Google</h6>
                 </div>

@@ -1,6 +1,6 @@
 .form{
     border: 1px solid rgb(158, 156, 156);
-    width: 35%;
+    width: 40%;
     margin: 30px auto;
     padding: 20px 40px;
 }
@@ -51,6 +51,7 @@
     padding: 10px;
     width: 28%;
     margin: 10px auto;
+    cursor: pointer;
 }
 .social-icon-text h6{
     font-weight: bolder;

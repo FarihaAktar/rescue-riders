@@ -4,7 +4,8 @@ import './Search.css';
 import vehicle from '../../MOCK_DATA.json';
 import { useParams } from 'react-router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserFriends } from '@fortawesome/free-solid-svg-icons'
+import { faUserFriends } from '@fortawesome/free-solid-svg-icons';
+import GoogleMap from '../GoogleMap/GoogleMap'
 
 
 const Search = () => {
@@ -18,7 +19,7 @@ const Search = () => {
     })
     useEffect(() => {
         setData(vehicle);
-    })
+    },[])
 
     const handleBlur = (e) => {
         const newLocationInfo = { ...location };
@@ -34,7 +35,7 @@ const Search = () => {
         }
     }
     return (
-        <div className="container">
+        <div>
             <Header></Header>
             <hr />
             <form className="search-form">
@@ -74,6 +75,10 @@ const Search = () => {
                         </div>
                     </div>}
             </form>
+            <div className='google-map'>
+                <GoogleMap className="map" />
+
+            </div>
         </div>
     );
 };

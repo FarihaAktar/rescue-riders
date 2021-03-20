@@ -6,7 +6,8 @@ import './Header.css'
 
 
 const Header = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+    const [loggedInUser] = useContext(UserContext);
     return (
         <Navbar collapseOnSelect expand="lg">
             <Navbar.Brand href="#home">Rescue Riders</Navbar.Brand>
@@ -20,7 +21,7 @@ const Header = () => {
 
                 </Nav>
                 <Nav>
-                    {loggedInUser.email ? <p>{loggedInUser.displayName}</p> :<button className="header-btn">Login</button>}
+                    {loggedInUser.email ? <p>{loggedInUser.displayName || loggedInUser.name}</p> : <Link to='/login'><button className="header-btn">Login</button></Link> }
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
