@@ -33,18 +33,23 @@
     width: 100px;
 }
 .item{
-    margin-left: 30px;
+    margin-left: 50px;
     margin-top: 30px;
 }
 .google-map{
     margin-top: 20px;
-    
+    text-align: center;
 }
-.map{
-    /* overflow: hidden; */
-    /* position: absolute; */
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+
+/* media query for mobile device */
+@media only screen and (max-width: 600px){
+    .search-form{
+        width: 90%;
+    }
+    .item{
+        margin-left: 15px;
+    }
+    .vehicle-search img{
+        width: 40px;
+    }
 }

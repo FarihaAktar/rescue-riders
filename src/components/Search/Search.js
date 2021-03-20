@@ -76,7 +76,8 @@ const Search = () => {
                     </div>}
             </form>
             <div className='google-map'>
-                <GoogleMap className="map" />
+                <h5>GooGle Map</h5>
+                <GoogleMap />
 
             </div>
         </div>

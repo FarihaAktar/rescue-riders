@@ -56,3 +56,13 @@
 .social-icon-text h6{
     font-weight: bolder;
 }
+/* media query for mobile device */
+@media only screen and (max-width: 600px){
+    .form{
+        width: 80%;
+    }
+    .social-icon-text{
+        width: 50%;
+        margin-top: 25px;
+    }
+}
