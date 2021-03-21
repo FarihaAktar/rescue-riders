@@ -16,7 +16,7 @@ const Home = () => {
         <div className="home">
             <Header></Header>
             <div className='head-line'>
-                <h4>Choose Your Preferred Ri <FontAwesomeIcon  icon={faBiking} /> de</h4>
+                <h2>Choose Your Preferred Ri <FontAwesomeIcon  icon={faBiking} /> de</h2>
                 <p>We are always here for your rescue</p>
             </div>
             <ul className="list">

@@ -10,12 +10,13 @@
     text-align: center;
     margin-top: 60px;
 }
-.head-line h4{
+.head-line h2{
     font-weight: bolder;
-    color: rgb(4, 40, 245);
+    color: rgb(66, 94, 253);
+
 }
 .head-line p{
-    color: rgb(112, 133, 253);
+    color: rgb(103, 146, 246);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
