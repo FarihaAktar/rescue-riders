@@ -69,10 +69,10 @@
         width: 80%;
     }
     .social-icon-text{
-        width: 50%;
+        width: 70%;
         margin-top: 25px;
     }
     .forgot-tag{
-        margin-left: 50px;
+       display: none;
     }
 }

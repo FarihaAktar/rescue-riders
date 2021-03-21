@@ -6,7 +6,24 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.head-line{
+    text-align: center;
+    margin-top: 60px;
+}
+.head-line h4{
+    font-weight: bolder;
+    color: rgb(4, 40, 245);
+}
+.head-line p{
+    color: rgb(112, 133, 253);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
+}
+.smile-face{
+    /* color: white; */
+    font-size: 25px;
+    margin-left: 10px;
+}
 .image-tag{
     width: 170px;
     margin-top: 30px;
@@ -15,7 +32,7 @@
 .list{
     display: flex;
     justify-content: center;
-    margin-top: 140px;
+    margin-top: 50px;
 }
 ul li{
     list-style: none;
@@ -23,7 +40,7 @@ ul li{
     margin-left: 25px;
     border-radius: 10px;
     text-align: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.459);
 }
 ul li a{
     text-decoration: none;
@@ -48,16 +65,21 @@ ul li a h4:hover{
     }
     .list{
         flex-direction: column;
-        margin-top: 5px;
+        margin-top: 60px;
         
     }
      
     ul li{
-        padding: 10px 10px;
-        margin-left: 0;
-        margin-right: 30px;
-        background-color: rgb(255, 248, 248);
-        border: 11px solid rgb(162, 210, 255);
-        margin-top: 10px;
+        padding: 0;
+        padding-bottom: 5px; 
+        margin: 10px auto;
+       
+        background-color: rgba(78, 186, 212, 0.712);
+        /* border: 11px solid rgb(162, 210, 255); */
+        border-radius: 20px;
+        width: 70%;
+    }
+    ul li a{
+        color: rgb(20, 2, 2);
     }
 }
