@@ -126,7 +126,6 @@ const Login = () => {
                     <div className="comment">
                         <p style={{ color: 'red' }}>{user.error}</p>
                         <h6>Don't have an account?</h6>
-                        {/* <Link to="/account">Create an account</Link> */}
                         <p onClick={handleChange}>Create an account</p>
 
                     </div>

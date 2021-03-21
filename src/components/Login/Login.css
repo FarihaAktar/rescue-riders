@@ -25,6 +25,9 @@
     color: #fff;
     border: 1px solid rgb(47, 86, 160);
 }
+.form-button:hover{
+    background-color: rgb(236, 117, 38);
+}
 .comment{
     margin-top: 15px;
     text-align: center;
