@@ -10,7 +10,6 @@ import Home from './components/Home/Home';
 import NoMatch from './components/NoMatch/NoMatch';
 import Search from './components/Search/Search';
 import Login from './components/Login/Login';
-import CreateAccount from './components/Login/CreateAccount/CreateAccount';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
@@ -27,9 +26,6 @@ function App() {
           <PrivateRoute path="/vehicle/:key">
             <Search></Search>
           </PrivateRoute>
-          <Route path="/account">
-            <CreateAccount></CreateAccount>
-          </Route>
           <Route path="/login">
             <Login></Login>
           </Route>

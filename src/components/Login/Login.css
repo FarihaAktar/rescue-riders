@@ -1,9 +1,74 @@
 .forgot-tag{
     margin-left: 100px;
 }
-
+.form{
+    border: 1px solid rgb(158, 156, 156);
+    width: 40%;
+    margin: 30px auto;
+    padding: 20px 40px;
+}
+.form h4{
+    font-weight: bolder;
+}
+.input-text{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid gray;
+    margin-top: 40px;
+    
+}
+.form-button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 6px 0;
+    background-color: rgb(92, 135, 205);
+    color: #fff;
+    border: 1px solid rgb(47, 86, 160);
+}
+.comment{
+    margin-top: 15px;
+    text-align: center;
+}
+.comment p{
+    color: #007bff;
+    cursor: pointer;
+}
+.comment h6, p{
+    font-weight:bolder;
+}
+.social-media{
+    margin-bottom: 40px;
+}
+.social-media h5{
+    text-align: center;
+}
+.social-icon{
+   margin-right: 60px;
+   color: rgb(86, 86, 243);
+   font-size: 30px;
+}
+.social-icon-text{
+    border: 1px solid rgb(182, 179, 179);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 28%;
+    margin: 10px auto;
+    cursor: pointer;
+}
+.social-icon-text h6{
+    font-weight: bolder;
+}
 /* media query for mobile device */
 @media only screen and (max-width: 600px){
+    .form{
+        width: 80%;
+    }
+    .social-icon-text{
+        width: 50%;
+        margin-top: 25px;
+    }
     .forgot-tag{
         margin-left: 50px;
     }

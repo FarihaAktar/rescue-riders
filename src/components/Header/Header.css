@@ -1,15 +1,37 @@
 .nav-test{
     border: 1px solid red;
 }
+.logo{
+    font-size: 27px;
+    font-weight: bolder;
+}
 
 .link{
     margin-left: 20px ;
+    color: rgb(39, 12, 0);
+    font-size: 15px;
+    font-weight: bolder;
+}
+.user-name{
+    text-transform:capitalize;
+    font-size: 15px;
+    color: white;
+    background-image: linear-gradient(to right,rgb(188, 188, 246) 10%,rgb(96, 96, 246) 100% );
+    padding: 5px 10px;
+    font-weight: bolder;
+    border-radius: 5px;
+    margin-top: 10px;
 }
  .header-btn{
     margin-left: 20px;
-    padding: 6px 20px;
+    padding: 6px 25px;
     background-color: rgb(92, 135, 205);
     color: #fff;
-    border: 1px solid rgb(47, 86, 160);
+    border: 1px solid rgb(75, 113, 184);
     border-radius: 5px;
+    font-weight:500;
+ }
+ .header-btn:hover{
+     background-color: rgb(236, 117, 38);
+     /* color: black; */
  }
