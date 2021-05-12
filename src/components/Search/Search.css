@@ -47,6 +47,11 @@
     width: 100%;
     background-color: rgba(253, 143, 100, 0.849);
 }
+/* .google-div{
+    border: 1px solid red;
+    display: flex;
+    
+} */
 
 /* media query for mobile device */
 @media only screen and (max-width: 600px){
